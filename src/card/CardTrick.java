@@ -31,24 +31,33 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
+        //commenting to change to luckyCard code
+        /*
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the card value (1-13): ");
         int userValue = scanner.nextInt();
         scanner.nextLine();
         System.out.println("Enter the suit of the card (Hearts, Diamonds, Spades, Clubs): ");
         String userSuit = scanner.nextLine();
-        
+        */
+        /*
         Card userCard = new Card();
         userCard.setValue(userValue);
         userCard.setSuit(userSuit);
+        */
         
-        // and search magicHand here
+        // hardcoded luckyCard 
+       Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Spades");
+        System.out.println("Lucky Card: " + luckyCard.getValue() + " of " + luckyCard.getSuit());
+
+        //code to check for luckyCard match in array
         boolean cardMatch = false;
-        for (Card c : magicHand){
-        if (c.getValue() == userCard.getValue() && c.getSuit().equals(userCard.getSuit())){
-        cardMatch = true;
-        break;
-        }
+        for (Card card : magicHand) {
+            if (card.getValue() == luckyCard.getValue() && luckyCard.getSuit().equals(luckyCard.getSuit())) {
+                cardMatch = true;
+                break;
         
         //Then report the result here
         if (cardMatch){
@@ -62,8 +71,8 @@ public class CardTrick {
         for (Card card : magicHand) {
             System.out.println(card.getValue() + " of " + card.getSuit());
         }
-        scanner.close();
-        // add one luckcard hard code 2,clubs
+        //scanner.close();
+        
     }
     }
 }
