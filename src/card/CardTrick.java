@@ -14,6 +14,7 @@ import java.util.Random;
  * student number: 991805350
  * username: langlbri
  * ICE-1
+ * merged master
  */
 public class CardTrick {
     
